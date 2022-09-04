@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+
+<head>
+    <!--This first link styles the page using bootstrap. This has the lowest priority in terms of CSS-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <!--This link styles the page using a custom style sheet. Styles on this sheet override the bootstrap style sheet. All other styles cascade as normal.-->
+    <link rel="stylesheet" type="text/css" href="CSS/OnlineStore.css">
+    <!-- This link adds in an additional font from Google Fonts. I read up on doing this from  https://www.w3schools.com/css/css_font_google.asp-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+    <!-- This imports Font Awesome. I used this on a previous project and read more about it here https://www.w3schools.com/icons/fontawesome_icons_intro.asp -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!--JavaScript-->
+    <script src="JavaScript/OnlineStore.js"></script>
+    <!--This sets the title for the page-->
+    <title>Game On! - Delivery</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-sm navbar-red">
+        <a class="navbar-brand" href="homePage.html" style="font-family:'Audiowide',sans-serif;font-size: 30px;">Game
+            On</a>
+        <!-- Links to the other pages -->
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="catalogue.html">For Sale</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="AboutUs.html">About Us</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link dropDownSource" href="javascript:void(0)">Delivery</a>
+                <div class="dropDownList">
+                    <ul>
+                        <li><a class="dropDownItem" href="Shipping.html">Delivery Costs</a></li>
+                        <li><a class="dropDownItem" href="packingPromise.html">Packing Promise</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="checkout.html">Cart <i class="fa fa-shopping-cart"></i></a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h3>Delivery and Returns</h3>
+                <p>At Game on we offer a variety of shipping options depending on your location. Refer to the table
+                    below to
+                    check the options available to you.
+                    <br> If, for whatever reason, you need to return an item please follow the instructions <a
+                        href="https://www.evri.com/return-a-parcel/how-to-return-a-parcel">here</a>.
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <!-- The following code will produce a hovering table. The following link was used to help me do this https://getbootstrap.com/docs/4.0/content/tables/#hoverable-rows -->
+                <table class="table table-hover hideShow">
+                    <thead>
+                        <tr>
+                            <th scope="col">Location</th>
+                            <th scope="col">Standard delivery</th>
+                            <th scope="col">First Class</th>
+                            <th scope="col">Next Working Day<a href="#nextDelivery">*</a></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">Mainland UK</th>
+                            <td>£1.99</td>
+                            <td>£2.99</td>
+                            <td>£5.99</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">UK Islands</th>
+                            <td>£2.99</td>
+                            <td>£3.99</td>
+                            <td>£6.99</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Europe</th>
+                            <td>£5.99</td>
+                            <td>£7.99</td>
+                            <td>N/A</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Rest of World</th>
+                            <td>£10.99</td>
+                            <td>£15.99</td>
+                            <td>N/A</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12" id="hideShowBtns">
+                <button class="btn-primary showBtn">Show Delivery Prices</button>
+                <button class="btn-primary hideBtn">Hide Delivery Prices</button>
+            </div>
+        </div>
+    </div>
+    <footer id="nextDelivery">*Next working day delivery if ordered before 1pm on the previous working
+        day</footer>
+    <footer><a href=AboutUs.html#contact>Contact Us!</a></footer>
+</body>
+
+</html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--This first link styles the page using bootstrap. This has the lowest priority in terms of CSS-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <!--This link styles the page using a custom style sheet. Styles on this sheet override the bootstrap style sheet. All other styles cascade as normal.-->
+    <link rel="stylesheet" type="text/css" href="CSS/OnlineStore.css">
+    <!-- This link adds in an additional font from Google Fonts. I read up on doing this from  https://www.w3schools.com/css/css_font_google.asp-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+    <!-- This imports Font Awesome. I used this on a previous project and read more about it here https://www.w3schools.com/icons/fontawesome_icons_intro.asp -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Javascript file -->
+    <script src="JavaScript/OnlineStore.js"></script>
+    <script src="JavaScript/checkout.js"></script>
+    <!--This sets the title for the page-->
+    <title>Game On! - Checkout</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-sm navbar-red">
+        <a class="navbar-brand" href="homePage.html" style="font-family:'Audiowide',sans-serif;font-size: 30px;">Game
+            On</a>
+        <!-- Links to the other pages -->
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="catalogue.html">For Sale</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="AboutUs.html">About Us</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link dropDownSource" href="javascript:void(0)">Delivery</a>
+                <div class="dropDownList">
+                    <ul>
+                        <li><a class="dropDownItem" href="Shipping.html">Delivery Costs</a></li>
+                        <li><a class="dropDownItem" href="packingPromise.html">Packing Promise</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="checkout.html">Cart <i class="fa fa-shopping-cart"></i></a>
+            </li>
+        </ul>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h2>Your Shopping Cart</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12" id="cartDiv">
+                <table id="shoppingCartTable">
+                    <tr id="cartHeadings">
+                        <th id="thProductName">Product</th>
+                        <th id="thProductColor">Color</th>
+                        <th id="thProductPrice">Unit Price</th>
+                        <th id="thProductQuantity">Quantity</th>
+                        <th id="thProductTotalPrice">Total</th>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <h2>Delivery Information</h2>
+            </div>
+            <div class="col-lg">
+                <form class="form" id="deliveryInfo">
+                    <div class="form-group">
+                        <label id="deliveryOptions">Delivery or Collection?:</label>
+                        <label id="deliveryLabel" for="deliveryRadio">Delivery</label>
+                        <input type="radio" id="deliveryRadio" name="delOptions">
+                        <label id="collectionLabel" for="collectionRadio">Collection</label>
+                        <input type="radio" id="collectionRadio" name="delOptions">
+                        <br>
+
+                        <label id="deliveryType">Delivery Location</label>
+                        <select id="deliveryLocationList">
+                        </select>
+
+                        <br>
+                        <label id="salutationTitle">Title:</label>
+                        <select id="salutations">
+                            <option value="Mr.">Mr.</option>
+                            <option value="Mrs.">Mrs.</option>
+                            <option value="Ms.">Ms.</option>
+                            <option value="Dr.">Dr.</option>
+                            <option value="Mx.">Mx.</option>
+                            <option value="other">Other</option>
+                        </select>
+                        <!-- Field for other salutation. JS function causes it to appear if other is select. -->
+                        <br>
+                        <label id="firstNameLabel">First Name:</label>
+                        <input id="firstName" type="text">
+                        <br>
+                        <label id="secondNameLabel">Second Name:</label>
+                        <input id="secondName" type="text">
+                        <br>
+                        <label id="houseNoLabel">House/flat Number:</label>
+                        <input id="houseNo" type="text">
+                        <br>
+                        <label id="streetLabel">Street:</label>
+                        <input id="street" type="text">
+                        <br>
+                        <label id="cityLabel">City:</label>
+                        <input id="city" type="text">
+                        <br>
+                        <label id="countryLabel">Country:</label>
+                        <input id="country" type="text">
+
+                    </div>
+                    <input type="submit" id="delDetailsSubmit" class="btn-primary">
+                </form>
+            </div>
+
+        </div>
+        <div class="row" style="padding-top: 10px">
+            <div class="col-md-12">
+                <h2>Total to Pay</h2>
+                <table id="totalCost">
+                    <tr>
+                        <th>Total Cart Cost</th>
+                        <th>VAT</th>
+                        <th>Discount</th>
+                        <th>Postage</th>
+                        <th>Total Price To Pay</th>
+                    </tr>
+                    <tr>
+                        <td id="cartNoVat"></td>
+                        <td id="vat"></td>
+                        <td id="discount"></td>
+                        <td id="postage"></td>
+                        <td id="priceToPay"></td>
+                    </tr>
+                </table>
+                <form>
+                    <label id="couponLabel" for="couponCodes">Enter coupon code here:</label>
+                    <input type="text" id="couponCodes">
+                    
+                </form>
+                <button class="btn-primary" id="couponSubmit">Apply Coupon</button>
+                <button class="btn-primary" id="confirmOrderBtn" style="margin-top: 10px">Confirm Order</button>
+            </div>
+        </div>
+        </div>
+</body>
+
+</html>

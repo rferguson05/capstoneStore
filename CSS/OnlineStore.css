@@ -1,0 +1,223 @@
+/* All color combinations in this style sheet have been chosen using http://colorsafe.co/ to maximise accessibility. */
+/*This sets the style for the body */
+body {
+    font-family: Tahoma, sans-serif;
+    color: black;
+    background-color: #e8e8e8;
+    padding: 3px;
+    text-align: center;
+    width: 90%;
+    margin: auto;
+    z-index: 1;
+
+
+}
+
+/* This sets the style for all images */
+img {
+    border: solid #c60021;
+    border-radius: 15px;
+    margin: 10px;
+    padding: 3px;
+}
+
+/* This sets the style for all paragraph elements */
+p {
+    font-size: 24px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* This sets the style for the unordered lists on the site */
+ul {
+    list-style-type: square;
+    font-size: 20px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
+    /*The following makes the bullet points be inside the list item. I followed this tutorial for this https://www.w3schools.com/cssref/pr_list-style-position.asp */
+    list-style-position: inside;
+}
+
+/*This sets the style for the headings*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-align: center;
+    color: #c60021;
+    font-family: "Audiowide", sans-serif
+}
+
+p {
+    font-weight: lighter;
+}
+
+/* This sets the style for the links. hover and visited selectors also used to set styles when links have been visited or hovered over  */
+a {
+    color: #c60021;
+}
+
+a:hover {
+    color: #000000;
+}
+
+a:visited {
+    color: #c60021;
+}
+/* Sets the styles for all buttons */
+button{
+    padding: 3px;
+
+}
+
+/* The next two set the style for the bootstrap button including when it is hovered over */
+.btn-primary {
+    background-color: #c60021;
+    color: #e8e8e8;
+    border-color: #e8e8e8;
+    border-radius: 5px;
+}
+
+.btn-primary:hover {
+    background-color: #e8e8e8;
+    color: #c60021;
+    border-color: #c60021;
+}
+
+
+/* This sets the style for the article element and all child elements */
+article {
+    width: auto;
+    height: fit-content;
+    text-align: center;
+    text-size-adjust: 50%;
+}
+
+
+/* This sets the style adjustments to the bootstrap .table class */
+.table {
+    text-align: center;
+    border: solid #c60021;
+}
+
+.table thead{
+    background-color: #c8f7c5;
+}
+
+/* This sets the style for the .navbar-dark bootstrap class and any elements within that class */
+.navbar-red {
+    background-color: #c60021;
+    color: #c8f7c5;
+}
+
+.navbar-red h2 {
+    color: #e8e8e8;
+    -webkit-text-stroke: 1px black;
+    font-family: "Audiowide", sans-serif;
+    font-size: xx-large
+}
+
+.navbar-red a {
+    color: #e8e8e8;
+    /* applies a 0.75 px thick black line around the outside of the text. If not supported by browser text will default o above color.  */
+    -webkit-text-stroke: 0.75px black;
+    font-family: "Audiowide", sans-serif;
+    font-size: x-large
+}
+
+.navbar-red a:hover {
+    color: #000000;
+}
+
+/* This sets a class where the background of the chosen div will change color. Source https://www.w3schools.com/css/css3_animations.asp */
+
+
+
+@keyframes mymove {
+    from {
+        background-color: #e8e8e8
+    }
+
+    to {
+        background-color: #c8f7c5
+    }
+}
+.colorChange {
+    background-color: #e8e8e8;
+    animation-name: mymove;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+/* This sets the style for itemImg custom class when hovered */
+.itemImg{
+transition: transform .2s 
+}
+.itemImg:hover{
+transform: scale(1.2)
+}
+
+#nintendoLeft,
+#nintendoRight{
+    font-size: 50px;
+    position: relative;
+    top: 50%;
+}
+
+.productImg{
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+}
+
+.btn{
+    border: solid #c60021;
+}
+
+nav ul li ul{
+ 
+    /* display: none; */
+    position: absolute;
+    width:300px;
+    right:0px;
+    text-align: left;
+    background-color:#c60021;
+    color:  #e8e8e8;
+    /* Added a gradient to the bos so it appears less harsh. Source https://www.w3schools.com/css/css3_gradients.asp */
+    background-image: linear-gradient(#c60021,#e8e8e8 );
+    z-index: 2;
+}
+nav ul li ul .dropDownItem{
+    color: #e8e8e8;
+    font-size: 20px;
+}
+nav ul li ul .dropDownItem:hover{
+    color: black;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+#shoppingCartTable{
+    text-align: center;
+    width: 100%;
+}
+ #shoppingCartTable th{
+    background-color: #c60021;
+    color: #e8e8e8;
+ }
+#totalCost{
+    text-align: center;
+    width: 100%;
+}
+ #totalCost th{
+    background-color: #c60021;
+    color: #e8e8e8;
+}
+ #totalCost td{
+    font-size: 20px;
+}
+ #totalCost .priceToPay{
+    text-decoration-line: overline underline;
+}

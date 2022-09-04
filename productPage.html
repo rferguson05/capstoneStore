@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--This first link styles the page using bootstrap. This has the lowest priority in terms of CSS-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <!--This link styles the page using a custom style sheet. Styles on this sheet override the bootstrap style sheet. All other styles cascade as normal.-->
+    <link rel="stylesheet" type="text/css" href="CSS/OnlineStore.css">
+    <!-- This link adds in an additional font from Google Fonts. I read up on doing this from  https://www.w3schools.com/css/css_font_google.asp-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+    <!-- This imports Font Awesome. I used this on a previous project and read more about it here https://www.w3schools.com/icons/fontawesome_icons_intro.asp -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- The following two links allows the collapse feature of bootstrap to work. I found these by looking at the following query on StackOverflow https://stackoverflow.com/questions/22955916/bootstrap-collapse-not-collapsing -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">
+    </script>
+    <!-- JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js">
+    </script>
+    <!--JavaScript-->
+    <script src="JavaScript/OnlineStore.js"></script>
+    <script src="JavaScript/productPage.js"></script>
+    <!--This sets the title for the page-->
+    <title></title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-sm navbar-red">
+        <a class="navbar-brand" href="homePage.html" style="font-family:'Audiowide',sans-serif;font-size: 30px;">Game
+            On</a>
+        <!-- Links to the other pages -->
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="catalogue.html">For Sale</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="AboutUs.html">About Us</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link dropDownSource" href="javascript:void(0)">Delivery</a>
+                <div class="dropDownList">
+                    <ul>
+                        <li><a class="dropDownItem" href="Shipping.html">Delivery Costs</a></li>
+                        <li><a class="dropDownItem" href="packingPromise.html">Packing Promise</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="checkout.html">Cart <i class="fa fa-shopping-cart"></i></a></li>
+        </ul>
+    </nav>
+    <!-- Sets up bootstrap grid -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h2 id="productName"></h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md " id="productImg">
+            </div>
+            <div class="col-md">
+                <h3 id="productColor"></h3>
+                <h3>Details: </h3>
+                <p id="productDetails"></p>
+                <h2 id="productPrice"></h2>
+                <h4 id="numStock"></h4>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12"><button id="addToCartBtn" class="btn-primary" style="width:250px">Add to Cart <i class="fa fa-shopping-cart"></i></button></div>
+        </div>
+
+    </div>
+    <footer><a href=AboutUs.html#contact>Contact Us!</a></footer>
+</body>
+
+</html>
