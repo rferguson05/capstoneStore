@@ -1,4 +1,4 @@
-# GameOnOnlineStore
+# Game On Online Store
 ## Contents
 1. [About the site](#about-the-site)
 2. [Basic Pages](#basic-pages)
@@ -10,6 +10,7 @@
 This site is designed to show my developing skills in HTML, CSS, and JavaScript including using jQuery and JSON.
 The site provides a semi functional online store for a fictional gaming store. 
 There is a catalogue for displaying items with a quick add to cart function and also page for each product. 
+All files have been extensively commented so the below is intended to give a quick user guide. 
 
 ## Basic Pages
 The site contains several simple pages which are mainly simple HTML and CSS with a small selection of Javascript. All pages make use of bootstrap, specifically the grid which allows for a scalable layout which will adjust to the screen size of the user. 
@@ -20,7 +21,9 @@ All of these pages load OnlineStore.js which contains the basic functions of the
 In terms of HTML the catalogue page is a simple page with space for an image and some simple product details. 
 The catalogue has it's own JavaScript file catalogue.js. This file allows the site owner to store the product details in an array. The items are stored as objects and can be created using the constructor. 
 Once created the new item must be added to nintProductArray. Once this is done the new item will now be available on the gallery page. 
+
 ## Product Page
 Product page takes the current item from the catalogue page, extracts the relevant information from the object within the array and uses this infortmation to populate a new page. As long as the item has been added correctly as described above there is no need to alter this page when adding or removing an item. 
+
 ## Cart
-The cart/checkout uses the localStorage to store and calculate then display the 
+The cart/checkout uses the localStorage to store and calculate then display the total cost. The js file checkout.js contains the ability to add and remove voucher codes. These codes can be added using the coupons object constructor. For this you need a code and the discount as a decimal. The object must then be added to couponsArr before it will go live on the site.  
